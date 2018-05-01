@@ -5,7 +5,7 @@
 * Uses flux model for react
 * Install node and npm install
 * Then npm start
-____
+___
 ___
 # Topics Covered #
 * React js
