@@ -3,6 +3,8 @@
 ## For learning and refernce puposes only
 
 * Uses flux model for react
+* Install node and npm install
+* Then npm start
 ____
 ___
 # Topics Covered #
