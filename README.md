@@ -2,7 +2,7 @@
 
 ## For learning and refernce puposes only
 
-* Uses flux model for react
+* Uses Redux
 * Install node and npm install
 * Then npm start
 ___
@@ -13,6 +13,7 @@ ___
 * Two way binding
 * React Routing using React-Router V4
 * Firebase as backend using react
+* Redux
 
 ## Add your own config file in /src as config.jsx and export the config to get the app running. Tab used for submitting todos
 
