@@ -1,4 +1,5 @@
 import React from 'react';
+import {addTodo} from '../actions'
 
 export default class Nav extends React.Component{
     constructor(){
@@ -13,6 +14,7 @@ export default class Nav extends React.Component{
     }
 
     add(){
+        addTodo(this.state.todo)
         this.props.addtodos(this.state.todo);
         this.setState({todo:""});
     }
