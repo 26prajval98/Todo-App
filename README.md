@@ -40,5 +40,6 @@ ___
 
 Authentication Not included
 
-Learn and enjoy
+Learn and enjoy :raised_hand:
+
 ___
