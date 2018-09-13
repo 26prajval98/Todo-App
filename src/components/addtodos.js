@@ -8,7 +8,9 @@ export default class Nav extends React.Component {
     }
 
     add() {
-        this.props.addtodos(this.props.todoval);
+        if (this.props.todoval) {
+            this.props.addtodos(this.props.todoval);
+        }
         changeToDoVal("")
     }
 

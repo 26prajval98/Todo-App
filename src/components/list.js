@@ -50,6 +50,10 @@ class List extends React.Component {
                 return (
                     <div className="w3-animate-opacity">
                         <h1>{this.props.c} number of children are present in the initial</h1>
+                        <ReactCSSTransitionGroup
+                            transitionName="fade"
+                            transitionLeaveTimeout={500}
+                        >
                         {
                             this.props.todos.map((value) => {
                                 return (
@@ -57,6 +61,7 @@ class List extends React.Component {
                                 )
                             })
                         }
+                        </ReactCSSTransitionGroup>
                         <Addtodo addtodos={this.addtodo.bind(this)} todoval={this.props.todo} />
                     </div>
                 )
