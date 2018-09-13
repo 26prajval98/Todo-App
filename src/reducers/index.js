@@ -39,7 +39,7 @@ const toDoReducer = (state = {
         }
 
         case "SET_CHILDREN": {
-            state = { ...state, children: action.children }
+            state = { ...state, children: action.children, loading : false }
             return state
         }
 

@@ -72,7 +72,7 @@ const getChildrenClient = () => {
 const addAllChildren = () => {
     store.dispatch((dispatch) => {
         todoRef.on('child_added', (snap) => {
-            if(store.getState().toDo.children === store.getState().toDo.todos.length + 1){
+            if(store.getState().toDo.children <= store.getState().toDo.todos.length + 1){
                 dispatch(loadingDone())
             }
             dispatch(getTodo({todo : snap.val(), id : snap.key}))            

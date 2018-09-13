@@ -52,6 +52,7 @@ class List extends React.Component {
                         <h1>{this.props.c} number of children are present in the initial</h1>
                         <ReactCSSTransitionGroup
                             transitionName="fade"
+                            transitionEnterTimeout={300}
                             transitionLeaveTimeout={500}
                         >
                         {
@@ -70,6 +71,7 @@ class List extends React.Component {
                     <div className="w3-container w3-display-container" style={{ height: window.innerHeight }}>
                         <ReactCSSTransitionGroup
                             transitionName="fade"
+                            transitionEnterTimeout={300}
                             transitionLeaveTimeout={500}
                         >
                             <div className="w3-display-middle w3-center">
