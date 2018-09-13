@@ -1,7 +1,7 @@
 # A Simple ToDo App with react and firebase 
 
 ## For learning and refernce puposes only
-
+  
 ## <b>[Master Branch](https://github.com/26prajval98/Todo-App)
 
 * Uses flux model for react
@@ -40,6 +40,8 @@ ___
 
 Authentication Not included
 
-Learn and enjoy :raised_hand:
+Learn and enjoy :open_hands: :smile: :fireworks: :thumbsup:
+
+
 
 ___
