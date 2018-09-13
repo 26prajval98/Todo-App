@@ -9,11 +9,11 @@ ___
 ___
 # Topics Covered #
 * React js
-* React communication with components
-* Two way binding
 * React Routing using React-Router V4
 * Firebase as backend using react
 * Redux
+* React-redux
+* Redux-middlewares
 
 ## Add your own config file in /src as config.jsx and export the config to get the app running. Tab used for submitting todos
 
