@@ -23,7 +23,7 @@ class List extends React.Component {
         if (!firebase.apps.length)
             firebase.initializeApp(config);
 
-        this.db = firebase.database().ref().child('abcd-82368');
+        this.db = firebase.database().ref();
         this.todoRef = this.db.child('todolist');
     }
 

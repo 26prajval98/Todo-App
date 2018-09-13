@@ -7,7 +7,7 @@ import config from '../config';
 if (!firebase.apps.length)
     firebase.initializeApp(config);
 
-var db = firebase.database().ref().child('abcd-82368');
+var db = firebase.database().ref();
 var todoRef = db.child('todolist');
 
 const getTodo = (todo) => {
