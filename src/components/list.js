@@ -50,11 +50,17 @@ class List extends React.Component {
             if (this.props.alert)
                 return (
                     <div className="w3-container">
-                        <p className="w3-center w3-text-red w3-tiny" style={{ maxWidth: "1000px", margin: "auto", wordWrap: "break-word", cursor : "pointer" }} onClick={()=>{
-                            toggleAlert(false)
-                        }}>
-                            Max Number of characters is 40. Click on this to remove.
-                        </p>
+                        <ReactCSSTransitionGroup
+                            transitionName="fade"
+                            transitionEnterTimeout={300}
+                            transitionLeaveTimeout={500}
+                        >
+                            <p className="w3-center w3-text-red w3-tiny" style={{ maxWidth: "1000px", margin: "auto", wordWrap: "break-word", cursor: "pointer"}} onClick={() => {
+                                    toggleAlert(false)
+                                }}>
+                                    Max Number of characters is 40. Click on this to remove.
+                            </p>
+                        </ReactCSSTransitionGroup>
                     </div>
                 )
         }
@@ -64,7 +70,6 @@ class List extends React.Component {
                 return (
                     <div className="w3-animate-opacity">
                         <h1 className="w3-center">{this.props.c} number of children are present in the initial</h1>
-                        {alert()}
                         <ReactCSSTransitionGroup
                             transitionName="fade"
                             transitionEnterTimeout={300}
@@ -73,7 +78,7 @@ class List extends React.Component {
                             {
                                 this.props.todos.map((value) => {
                                     return (
-                                        <div key={value.id} className="w3-panel w3-green w3-padding w3-center w3-hover-red w3-row" style={{ maxWidth: "1000px", margin: "auto", wordWrap: "break-word" }}>
+                                        <div key={value.id} className="w3-panel w3-green w3-padding w3-center w3-hover-red w3-row" style={{ maxWidth: "1000px", margin: "auto", wordWrap: "break-word", marginBottom: "5px" }}>
                                             <div className="w3-col l10 m9 s12">
                                                 {value.todo}
                                             </div>
@@ -83,6 +88,7 @@ class List extends React.Component {
                                 })
                             }
                         </ReactCSSTransitionGroup>
+                        {alert()}
                         <Addtodo addtodos={this.addtodo.bind(this)} todoval={this.props.todo} />
                     </div>
                 )

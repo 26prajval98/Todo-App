@@ -22,7 +22,7 @@ export default class Nav extends React.Component {
 
     render() {
         return (
-            <div className="w3-display w3-center">
+            <div className="w3-display w3-center w3-margin w3-padding">
                 <input value={this.props.todoval} onChange={this.changetext.bind(this)} 
                 // onBlur={this.add.bind(this)}
                     onKeyDown={
