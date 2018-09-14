@@ -49,7 +49,7 @@ class List extends React.Component {
             if (!this.props.loading)
                 return (
                     <div className="w3-animate-opacity">
-                        <h1>{this.props.c} number of children are present in the initial</h1>
+                        <h1 className="w3-center">{this.props.c} number of children are present in the initial</h1>
                         <ReactCSSTransitionGroup
                             transitionName="fade"
                             transitionEnterTimeout={300}
@@ -58,7 +58,7 @@ class List extends React.Component {
                         {
                             this.props.todos.map((value) => {
                                 return (
-                                    <div key={value.id} className="w3-panel w3-green w3-padding w3-center w3-hover-red"> {value.todo} <span key={value.id} className="w3-right w3-button" onClick={this.deletetodo.bind(this, value.id)}>X</span> </div>
+                                    <div key={value.id} className="w3-panel w3-green w3-padding w3-center w3-hover-red" style={{maxWidth : "1000px", margin : "auto"}}> {value.todo} <span key={value.id} className="w3-right w3-button" onClick={this.deletetodo.bind(this, value.id)}>X</span> </div>
                                 )
                             })
                         }
