@@ -1,10 +1,16 @@
 import React from 'react';
-import { changeToDoVal } from '../actions'
+import { changeToDoVal, toggleAlert } from '../actions'
 
 export default class Nav extends React.Component {
 
     changetext(e) {
-        changeToDoVal(e.target.value)
+        if (e.target.value.length < 40){
+            changeToDoVal(e.target.value)
+            toggleAlert(false)
+        }
+        else{
+            toggleAlert(true)
+        }
     }
 
     add() {
@@ -17,13 +23,14 @@ export default class Nav extends React.Component {
     render() {
         return (
             <div className="w3-display w3-center">
-                <input value={this.props.todoval} onChange={this.changetext.bind(this)} onBlur={this.add.bind(this)}
+                <input value={this.props.todoval} onChange={this.changetext.bind(this)} 
+                // onBlur={this.add.bind(this)}
                     onKeyDown={
                         (e) => {
-                            if(e.key === "Enter")
+                            if (e.key === "Enter" || e.key === "Tab")
                                 this.add()
                         }
-                    } className="w3-input" style={{ outline: "none", maxWidth: "1000px", display: "block", margin: "auto" }} />
+                    } className="w3-input w3-center w3-padding" style={{ outline: "none", maxWidth: "1000px", display: "block", margin: "auto" }} />
             </div>
         )
     }

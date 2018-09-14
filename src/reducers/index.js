@@ -4,7 +4,8 @@ const toDoReducer = (state = {
     todos: [],
     loading: false,
     children: 0,
-    todo : ""
+    todo : "",
+    alert : false
 }, action) => {
 
     var todos;
@@ -45,6 +46,11 @@ const toDoReducer = (state = {
 
         case "LOADING_COMPLETE": {
             state = { ...state, loading: false }
+            return state
+        }
+
+        case "TOGGLE_ALERT" : {
+            state = { ...state, alert : action.show}
             return state
         }
 

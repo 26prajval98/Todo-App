@@ -31,6 +31,13 @@ const changeToDoVal = (todo) => {
     })
 }
 
+const toggleAlert = (show) => {
+    return store.dispatch({
+        type: "TOGGLE_ALERT",
+        show
+    })
+}
+
 const getChildren = () => {
     return {
         type: "GET_CHILDREN"
@@ -84,5 +91,6 @@ export {
     getChildrenClient,
     addAllChildren,
     deleteTodo,
-    changeToDoVal
+    changeToDoVal,
+    toggleAlert
 }
